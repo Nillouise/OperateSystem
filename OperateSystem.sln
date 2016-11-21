@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OperateSystem", "OperateSystem\OperateSystem.csproj", "{27ADD17C-5C14-45D6-AAA2-82E0C1FC8B0C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EatApple", "EatApple\EatApple.csproj", "{0AA94603-1FFF-4CE6-8731-6203D1FE84DD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{27ADD17C-5C14-45D6-AAA2-82E0C1FC8B0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27ADD17C-5C14-45D6-AAA2-82E0C1FC8B0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27ADD17C-5C14-45D6-AAA2-82E0C1FC8B0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27ADD17C-5C14-45D6-AAA2-82E0C1FC8B0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0AA94603-1FFF-4CE6-8731-6203D1FE84DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0AA94603-1FFF-4CE6-8731-6203D1FE84DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0AA94603-1FFF-4CE6-8731-6203D1FE84DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0AA94603-1FFF-4CE6-8731-6203D1FE84DD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
