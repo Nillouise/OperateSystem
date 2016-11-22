@@ -37,21 +37,46 @@ namespace EatApple
                 {
                     if(plate == plateState.orange )
                     {
-                        image.Source = new BitmapImage(new Uri(@"image/orange.jpg", UriKind.RelativeOrAbsolute));
-                        label.Content = "儿子：我吃了桔子。";
+                        //image.Source = new BitmapImage(new Uri(@"image/orange.jpg", UriKind.RelativeOrAbsolute));
+                        //label.Content = "儿子：我吃了桔子。";
+                        this.image.Dispatcher.Invoke(new Action(() =>
+                        {
+                            image.Source = new BitmapImage(new Uri(@"image/orange.jpg", UriKind.RelativeOrAbsolute));
+                        }
+));
+                        this.label.Dispatcher.Invoke(new Action(() =>
+                        {
+                            label.Content = "儿子：我吃了桔子。";
+                        }));
                         System.Threading.Thread.Sleep(1000);
                         plate = plateState.empty;
                     }
                     else if(plate==plateState.apple)
                     {
-                        image.Source = new BitmapImage(new Uri(@"image/apple.jpg", UriKind.RelativeOrAbsolute));
-                        label.Content = "儿子：我不吃苹果。";
+                        //image.Source = new BitmapImage(new Uri(@"image/apple.jpg", UriKind.RelativeOrAbsolute));
+                        //label.Content = "儿子：我不吃苹果。";
+                        this.image.Dispatcher.Invoke(new Action(() =>
+                        {
+                            image.Source = new BitmapImage(new Uri(@"image/apple.jpg", UriKind.RelativeOrAbsolute));
+                        }
+                        ));
+                        this.label.Dispatcher.Invoke(new Action(() =>
+                        {
+                            label.Content = "儿子：我不吃苹果。";
+                        }));
                         System.Threading.Thread.Sleep(500);
                     }
                     else if(plate == plateState.empty)
                     {
-                        image.Source = new BitmapImage(new Uri(@"image/plate.jpg", UriKind.RelativeOrAbsolute));
-                        label.Content = "空盘子，请等待。。。。";
+                        this.image.Dispatcher.Invoke(new Action(() =>
+                        {
+                            image.Source = new BitmapImage(new Uri(@"image/plate.jpg", UriKind.RelativeOrAbsolute));
+                        }
+                        ));
+                        this.label.Dispatcher.Invoke(new Action(() =>
+                        {
+                            label.Content = "空盘子，请等待。。。。";
+                        }));
                         System.Threading.Thread.Sleep(500);
                     }
                 }
@@ -63,22 +88,49 @@ namespace EatApple
                 {
                     if (plate == plateState.orange)
                     {
-                        image.Source = new BitmapImage(new Uri(@"image/orange.jpg", UriKind.RelativeOrAbsolute));
-                        label.Content = "女儿：我不吃桔子。";
+                        //image.Source = new BitmapImage(new Uri(@"image/orange.jpg", UriKind.RelativeOrAbsolute));
+                        //label.Content = "女儿：我不吃桔子。";
+                        this.image.Dispatcher.Invoke(new Action(() =>
+                        {
+                            image.Source = new BitmapImage(new Uri(@"image/orange.jpg", UriKind.RelativeOrAbsolute));
+                        }
+));
+                        this.label.Dispatcher.Invoke(new Action(() =>
+                        {
+                            label.Content = "女儿：我不吃桔子。";
+                        }));
                         System.Threading.Thread.Sleep(500);
                     }
                     else if (plate == plateState.apple)
                     {
-                        image.Source = new BitmapImage(new Uri(@"image/apple.jpg", UriKind.RelativeOrAbsolute));
-                        label.Content = "女儿：我吃了苹果。";
+                        //image.Source = new BitmapImage(new Uri(@"image/apple.jpg", UriKind.RelativeOrAbsolute));
+                        //label.Content = "女儿：我吃了苹果。";
+                        this.image.Dispatcher.Invoke(new Action(() =>
+                        {
+                            image.Source = new BitmapImage(new Uri(@"image/apple.jpg", UriKind.RelativeOrAbsolute));
+                        }
+));
+                        this.label.Dispatcher.Invoke(new Action(() =>
+                        {
+                            label.Content = "女儿：我吃了苹果。";
+                        }));
                         System.Threading.Thread.Sleep(1000);
                         plate = plateState.empty;
 
                     }
                     else if (plate == plateState.empty)
                     {
-                        image.Source = new BitmapImage(new Uri(@"image/plate.jpg", UriKind.RelativeOrAbsolute));
-                        label.Content = "空盘子，请等待。。。。";
+                        //image.Source = new BitmapImage(new Uri(@"image/plate.jpg", UriKind.RelativeOrAbsolute));
+                        //label.Content = "空盘子，请等待。。。。";
+                        this.image.Dispatcher.Invoke(new Action(() =>
+                        {
+                            image.Source = new BitmapImage(new Uri(@"image/plate.jpg", UriKind.RelativeOrAbsolute));
+                        }
+));
+                        this.label.Dispatcher.Invoke(new Action(() =>
+                        {
+                            label.Content = "空盘子，请等待。。。。";
+                        }));
                         System.Threading.Thread.Sleep(500);
                     }
                 }
@@ -90,8 +142,17 @@ namespace EatApple
                 {
                     if (plate == plateState.empty)
                     {
-                        image.Source = new BitmapImage(new Uri(@"image/apple.jpg", UriKind.RelativeOrAbsolute));
-                        label.Content = "父亲：我在盘子里放了苹果。";
+                        //image.Source = new BitmapImage(new Uri(@"image/apple.jpg", UriKind.RelativeOrAbsolute));
+                        //label.Content = "父亲：我在盘子里放了苹果。";
+                        this.image.Dispatcher.Invoke(new Action(() =>
+                        {
+                            image.Source = new BitmapImage(new Uri(@"image/apple.jpg", UriKind.RelativeOrAbsolute));
+                        }
+));
+                        this.label.Dispatcher.Invoke(new Action(() =>
+                        {
+                            label.Content = "父亲：我在盘子里放了苹果。";
+                        }));
                         System.Threading.Thread.Sleep(1000);
                         plate = plateState.apple;
                     }
@@ -104,8 +165,17 @@ namespace EatApple
                 {
                     if (plate == plateState.empty)
                     {
-                        image.Source = new BitmapImage(new Uri(@"image/orange.jpg", UriKind.RelativeOrAbsolute));
-                        label.Content = "母亲：我在盘子里放了桔子。";
+                        //image.Source = new BitmapImage(new Uri(@"image/orange.jpg", UriKind.RelativeOrAbsolute));
+                        //label.Content = "母亲：我在盘子里放了桔子。";
+                        this.image.Dispatcher.Invoke(new Action(() =>
+                        {
+                            image.Source = new BitmapImage(new Uri(@"image/orange.jpg", UriKind.RelativeOrAbsolute));
+                        }
+));
+                        this.label.Dispatcher.Invoke(new Action(() =>
+                        {
+                            label.Content = "母亲：我在盘子里放了桔子。";
+                        }));
                         System.Threading.Thread.Sleep(1000);
                         plate = plateState.orange;
                     }
