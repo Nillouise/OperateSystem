@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:dispatch"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525" Loaded="Window_Loaded">
+        Title="MainWindow" Height="350" Width="823" Loaded="Window_Loaded">
     <Grid>
         <Button x:Name="btn_NewTask" Content="新建作业" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="75" Click="btn_NewTask_Click"/>
-        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Margin="10,36,0,0" VerticalAlignment="Top" Width="497" Height="277" AutoGenerateColumns="False">
+        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Margin="10,36,0,0" VerticalAlignment="Top" Width="795" Height="277" AutoGenerateColumns="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding name}"  Header="作业名"/>
                 <DataGridTextColumn Binding="{Binding state}"  Header="作业状态"/>
@@ -16,12 +16,22 @@
                 <DataGridTextColumn Binding="{Binding responseRatio}"  Header="作业响应比"/>
                 <DataGridTextColumn Binding="{Binding totalLong}"  Header="作业长度"/>
                 <DataGridTextColumn Binding="{Binding compeleteRate}"  Header="完成率"/>
+                <DataGridTemplateColumn Header="进度" Width="380">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <ProgressBar Grid.Row="0" Grid.Column="0"  Minimum="0" Maximum="200" Value="{Binding progress,Mode=OneWay}" ToolTip="{Binding progress,Mode=OneWay}">
+                                </ProgressBar>
+                            </Grid>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
             </DataGrid.Columns>
 
         </DataGrid>
-        <Button x:Name="button" Content="高响应比优先调度" HorizontalAlignment="Left" Margin="389,10,0,0" VerticalAlignment="Top" Width="118" Click="button_Click"/>
-        <Button x:Name="button1" Content="动态优先级调度" HorizontalAlignment="Left" Margin="288,10,0,0" VerticalAlignment="Top" Width="96" Click="button1_Click"/>
-        <Button x:Name="button2" Content="时间片调度" HorizontalAlignment="Left" Margin="208,10,0,0" VerticalAlignment="Top" Width="75" Click="button2_Click"/>
+        <Button x:Name="button" Content="高响应比优先调度" HorizontalAlignment="Left" Margin="658,10,0,0" VerticalAlignment="Top" Width="118" Click="button_Click"/>
+        <Button x:Name="button1" Content="动态优先级调度" HorizontalAlignment="Left" Margin="557,10,0,0" VerticalAlignment="Top" Width="96" Click="button1_Click"/>
+        <Button x:Name="button2" Content="时间片调度" HorizontalAlignment="Left" Margin="477,10,0,0" VerticalAlignment="Top" Width="75" Click="button2_Click"/>
 
     </Grid>
 </Window>

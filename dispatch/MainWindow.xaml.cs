@@ -42,6 +42,11 @@ namespace dispatch
             _responseRatio = 0;
         }
 
+        public int progress
+        {
+            get { return _doneLong * 200 / _totalLong; }
+        }
+
         public int priority
         {
             get { return _priority; }
