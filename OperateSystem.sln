@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EatApple", "EatApple\EatApp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dispatch", "dispatch\dispatch.csproj", "{5F13B2E4-C099-40FF-A1BC-31F98258EF5E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankDeadLock", "BankDeadLock\BankDeadLock.csproj", "{B8FC3C3C-5632-467A-A02A-11751B31FA6F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{5F13B2E4-C099-40FF-A1BC-31F98258EF5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F13B2E4-C099-40FF-A1BC-31F98258EF5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5F13B2E4-C099-40FF-A1BC-31F98258EF5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8FC3C3C-5632-467A-A02A-11751B31FA6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8FC3C3C-5632-467A-A02A-11751B31FA6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8FC3C3C-5632-467A-A02A-11751B31FA6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8FC3C3C-5632-467A-A02A-11751B31FA6F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

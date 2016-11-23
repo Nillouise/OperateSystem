@@ -118,7 +118,7 @@ namespace dispatch
         {
             taskList.Add(new Task("就绪", "1321", 10));
             dataGrid.ItemsSource = taskList;
-            timer.Interval = TimeSpan.FromMilliseconds(100);
+            timer.Interval = TimeSpan.FromMilliseconds(300);
             timer.Tick += responseScheduling;
             timer.Tick += timer_Tick;
             timer.Start();
