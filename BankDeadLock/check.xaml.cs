@@ -56,10 +56,13 @@ namespace BankDeadLock
                         {
                             ok = true;
                             record.record[i].Free = fa.ToString() + " " + fb.ToString() + " " + fc.ToString() + " " + fd.ToString();
+
                             fa += record.record[i].aa;
                             fb += record.record[i].ab;
                             fc += record.record[i].ac;
                             fd += record.record[i].ad;
+                            record.record[i].FreeAllocation = fa.ToString() + " " + fb.ToString() + " " + fc.ToString() + " " + fd.ToString();
+
                             record.record[i].finish = true;
 
 
@@ -78,7 +81,13 @@ namespace BankDeadLock
                 textBlock.Text = "并没有安全序列，系统不安全。";
             }else
             {
+                foreach(var i in record.record)
+                {
+                }
+
                 textBlock.Text = "系统是安全的，安全序列为:{";
+
+
                 foreach (var i in record.record)
                     textBlock.Text += i.name+" ";
                 textBlock.Text += "}";

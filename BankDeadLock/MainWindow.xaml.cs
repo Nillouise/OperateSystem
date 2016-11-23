@@ -103,10 +103,14 @@ namespace BankDeadLock
             record.record.Add(new process(1, 1, 1, 0, 4, 2, 1, 0, 3, 1, 0, 0, 3));
             record.record.Add(new process(1, 1, 0, 1, 1, 1, 2, 1, 0, 0, 2, 0, 4));
             record.record.Add(new process(0, 0, 0, 0, 2, 1, 1, 0, 2, 1, 1, 0, 5));
-            record.ava = 1;
-            record.avb = 0;
-            record.avc = 2;
-            record.avd = 0;
+
+            //record.record.Add(new process(0, 0, 3, 2, 0, 0, 4, 4, 0, 0, 1, 2, 0));
+            //record.record.Add(new process(1, 0, 0, 0, 2, 7, 5, 0, 1, 7, 5, 0, 1));
+            //record.record.Add(new process(1, 3, 5, 4, 3, 6, 10, 10, 2, 3, 5, 6, 2));
+            //record.record.Add(new process(0, 3, 3, 2, 0, 9, 8, 4, 0, 6, 5, 2, 3));
+            //record.record.Add(new process(0, 0, 1, 4, 0, 6, 6, 10, 0, 6, 5, 6, 4));
+
+
 
             dataGrid.ItemsSource = record.record;
         }
@@ -114,6 +118,18 @@ namespace BankDeadLock
         private void button_Click(object sender, RoutedEventArgs e)
         {
             record.requestIndex =  dataGrid.SelectedIndex;
+            var f = textBox.Text.Split(' ');
+            record.ava = int.Parse(f[0]);
+            record.avb = int.Parse(f[1]);
+            record.avc = int.Parse(f[2]);
+            record.avd = int.Parse(f[3]);
+
+            var g = textBox1.Text.Split(' ');
+            record.ra = int.Parse(g[0]);
+            record.rb = int.Parse(g[1]);
+            record.rc = int.Parse(g[2]);
+            record.rd = int.Parse(g[3]);
+
             check w2 = new check(ref record);
             w2.Show();
         }
